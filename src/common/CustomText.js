@@ -32,6 +32,7 @@ const CustomText = props => {
     fwBold,
     style,
     lh,
+    numberOfLines,
   } = props;
   return (
     <RNText

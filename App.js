@@ -1,11 +1,23 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import CustomText from "./src/common/CustomText";
+import { useFonts } from "@use-expo/font";
+import { AppLoading } from "expo";
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    NunitoBlack: require("./assets/static/Nunito-Black.ttf"),
+    NunitoBold: require("./assets/static/Nunito-Bold.ttf"),
+  });
+  // if (!fontsLoaded) {
+  //   return <AppLoading />;
+  // }
+
   return (
     <View style={styles.container}>
-      <CustomText>Plant Application</CustomText>
+      <CustomText nunitoBold primaryColor>
+        Plant Application
+      </CustomText>
       <StatusBar style="auto" />
     </View>
   );
