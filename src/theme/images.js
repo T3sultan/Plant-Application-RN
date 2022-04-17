@@ -1,2 +1,35 @@
-const images = {};
+const images = {
+  //icons
+  camera: require("../..//assets/icons/camera.png"),
+  cube: require("../..//assets/icons/cube_icon.png"),
+  flash: require("../..//assets/icons/flash_icon.png"),
+  heart: require("../..//assets/icons/heart_icon.png"),
+  heartGreenOutline: require("../..//assets/icons/heart_green_outline.png"),
+  heartRed: require("../..//assets/icons/heart_red.png"),
+  search: require("../..//assets/icons/search_icon.png"),
+  focus: require("../..//assets/icons/focus.png"),
+  plus: require("../..//assets/icons/plus.png"),
+  sun: require("../..//assets/icons/sun.png"),
+  drop: require("../..//assets/icons/drop.png"),
+  temperature: require("../..//assets/icons/temperature.png"),
+  garden: require("../..//assets/icons/garden.png"),
+  seed: require("../..//assets/icons/seed.png"),
+  chevron: require("../..//assets/icons/chevron.png"),
+  downArrow: require("../..//assets/icons/down-arrow.png"),
+  back: require("../..//assets/icons/back.png"),
+  //images
+  plant1: require("../../assets/images/plant_1.jpeg"),
+  plant2: require("../../assets/images/plant_2.jpg"),
+  plant3: require("../../assets/images/plant_3.jpg"),
+  plant4: require("../../assets/images/plant_4.jpg"),
+  plant5: require("../../assets/images/plant_5.jpg"),
+  plant6: require("../../assets/images/plant_6.jpg"),
+  plant7: require("../../assets/images/plant_7.jpg"),
+  profile1: require("../../assets/images/profile_1.jpg"),
+  profile2: require("../../assets/images/profile_2.jpg"),
+  profile3: require("../../assets/images/profile_3.jpg"),
+  profile4: require("../../assets/images/plant_4.jpg"),
+  profile5: require("../../assets/images/plant_5.jpg"),
+  bannerBg: require("../../assets/images/banner_bg.jpg"),
+};
 export default images;
