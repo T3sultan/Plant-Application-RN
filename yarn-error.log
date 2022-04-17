@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @use-expo/fon
+  C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @react-navigation/native
 
 PATH: 
-  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u272-b10\bin;C:\Program Files\Java\jdk1.8.0_171\bin;C:\TDM-GCC-32\bin;C:\Program Files\nodejs\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Users\User\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\JetBrains\WebStorm 2020.1.2\bin;;C:\Windows\system32;C:\GnuWin32\bin;C:\Program Files\heroku\bin;C:\Users\User\AppData\Roaming\npm
+  C:\Users\User\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\User\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts;C:\Python39;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u272-b10\bin;C:\Program Files\Java\jdk1.8.0_171\bin;C:\TDM-GCC-32\bin;C:\Program Files\nodejs;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_171\bin;C:\Users\User\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\JetBrains\WebStorm 2020.1.2\bin;C:\Windows\system32;C:\GnuWin32\bin;C:\Program Files\heroku\bin;C:\Users\User\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
 
 Yarn version: 
   1.22.10
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@use-expo%2ffon: Not found
-      at Request.params.callback [as _callback] (C:\Users\User\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
-      at Request.self.callback (C:\Users\User\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
-      at Request.emit (node:events:390:28)
-      at Request.<anonymous> (C:\Users\User\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
-      at Request.emit (node:events:390:28)
-      at IncomingMessage.<anonymous> (C:\Users\User\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
-      at Object.onceWrapper (node:events:509:28)
-      at IncomingMessage.emit (node:events:402:35)
-      at endReadableNT (node:internal/streams/readable:1343:12)
-      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+  Error: EPERM: operation not permitted, unlink 'F:\React Native Expo\plant-App\node_modules\@babel\generator\node_modules\.bin'
 
 npm manifest: 
   {
@@ -39,11 +29,13 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
+      "@use-expo/font": "2.0.0",
       "expo": "~44.0.0",
       "expo-status-bar": "~1.2.0",
       "react": "17.0.1",
       "react-dom": "17.0.1",
       "react-native": "0.64.3",
+      "react-native-size-matters": "0.4.0",
       "react-native-web": "0.17.1"
     },
     "devDependencies": {
@@ -1534,6 +1526,11 @@ Lockfile:
     integrity sha512-yEJzHoxf6SyQGhBhIYGXQDSCkJjB6HohDShto7m8vaKg9Yp0Yn8+71J9eakh2bnPg6BfsH9PRMhiRTZnd4eXGQ==
     dependencies:
       "@types/yargs-parser" "*"
+  
+  "@use-expo/font@2.0.0":
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/@use-expo/font/-/font-2.0.0.tgz#09b56d626e5b0c83cd0116f5bb69ad6d612d677f"
+    integrity sha512-oOJ2uaRyZNQg7PnQviz7nBcdrRL38zxScab4ktgtI4asa6G0dHW9wg307uJJmn0sHS04Yqtw+m0EOjDcGw3iWg==
   
   "@xmldom/xmldom@~0.7.0":
     version "0.7.5"
@@ -4444,6 +4441,11 @@ Lockfile:
       flow-parser "^0.121.0"
       jscodeshift "^0.11.0"
       nullthrows "^1.1.1"
+  
+  react-native-size-matters@0.4.0:
+    version "0.4.0"
+    resolved "https://registry.yarnpkg.com/react-native-size-matters/-/react-native-size-matters-0.4.0.tgz#01bfd0d59454318f4e0b13fe9c1eb0523d70f2e0"
+    integrity sha512-8/C0htHrFWeUm9N8JegmadovUfgTWkGBkDPZ1N3YkXtDWb+98Ya2gThiKcu445r8c7YhcrBfnHz/mYsXIusaOQ==
   
   react-native-web@0.17.1:
     version "0.17.1"

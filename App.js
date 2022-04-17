@@ -3,6 +3,11 @@ import { StyleSheet, Text, View } from "react-native";
 import CustomText from "./src/common/CustomText";
 import { useFonts } from "@use-expo/font";
 import { AppLoading } from "expo";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Home } from "./src/screens/app";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -14,12 +19,11 @@ export default function App() {
   // }
 
   return (
-    <View style={styles.container}>
-      <CustomText nunitoBold primaryColor>
-        Plant Application
-      </CustomText>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
