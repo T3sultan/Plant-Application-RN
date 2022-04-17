@@ -31,5 +31,16 @@ const images = {
   profile4: require("../../assets/images/plant_4.jpg"),
   profile5: require("../../assets/images/plant_5.jpg"),
   bannerBg: require("../../assets/images/banner_bg.jpg"),
+
+  //tabs icon
+  homeActive: require("../../assets/house.png"),
+  homeInActive: require("../../assets/home.png"),
+  BoxActive: require("../../assets/delivery-box.png"),
+  BoxInActive: require("../../assets/box.png"),
+  CameraActive: require("../../assets/photo.png"),
+  CameraInActive: require("../../assets/camera.png"),
+  search: require("../../assets/search-interface-symbol.png"),
+  favouriteActive: require("../../assets/favorite.png"),
+  favouriteInActive: require("../../assets/heart.png"),
 };
 export default images;
