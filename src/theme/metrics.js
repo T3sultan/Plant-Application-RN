@@ -15,6 +15,7 @@ const metrics = {
   screenWidth: width,
   screenHight: height,
   btnHeight: scale(40),
+  containerHeader: scale(100),
   btnBorderRadius: scale(20),
   splashWidth: scale(300),
   splashHeight: scale(300),
