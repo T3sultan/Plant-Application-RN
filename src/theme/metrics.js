@@ -12,6 +12,7 @@ const metrics = {
   doubleBase: scale(30),
   doubleDoubleBase: scale(40),
   regular: scale(50),
+  card: scale(80),
   screenWidth: width,
   screenHight: height,
   btnHeight: scale(40),

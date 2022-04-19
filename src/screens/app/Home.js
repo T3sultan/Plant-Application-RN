@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { Colors, Images, Metrics } from "../../theme";
+import CustomText from "../../common/CustomText";
+import Card from "../../components/Card";
 
 const Home = () => {
   return (
@@ -9,8 +11,8 @@ const Home = () => {
       <View style={styles.wrapper}>
         <View style={styles.wrapperStyle}>
           <View style={styles.headerStyle}>
-            <View>
-              <Text>plant App</Text>
+            <View style={styles.headerContainer}>
+              <CustomText style={styles.textContainer}>New Plants</CustomText>
               <TouchableOpacity
                 onPress={() => {
                   console.log("sdfsdfkj");
@@ -22,6 +24,9 @@ const Home = () => {
                   style={styles.imageStyle}
                 />
               </TouchableOpacity>
+            </View>
+            <View style={styles.newPlantsContainer}>
+              <Card />
             </View>
           </View>
         </View>
@@ -42,7 +47,8 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     backgroundColor: Colors.white,
-    height: "20%",
+    height: "30%",
+    // marginTop: Metrics.halfBase,
   },
   wrapperContainer: {
     backgroundColor: Colors.white,
@@ -65,6 +71,18 @@ const styles = StyleSheet.create({
   imageStyle: {
     width: Metrics.base,
     height: Metrics.base,
-    marginTop: Metrics.halfBase,
+    // marginTop: Metrics.halfBase,
+  },
+  textContainer: {
+    color: Colors.white,
+    fontSize: 20,
+  },
+  headerContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  newPlantsContainer: {
+    // marginTop: Metrics.base,
   },
 });
