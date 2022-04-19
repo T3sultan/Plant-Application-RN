@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Camera from "../screens/app/Camera";
 import Search from "../screens/app/Search";
 import Favourite from "../screens/app/Favourite";
-import { Images } from "../theme";
+import { Images, Metrics } from "../theme";
 import Box from "../screens/app/Box";
 import Home from "../screens/app/Home";
 
@@ -33,7 +33,7 @@ const AppNavigation = () => {
 
           return (
             <Image
-              style={{ width: 24, height: 24 }}
+              style={{ width: Metrics.base, height: Metrics.base }}
               resizeMode="contain"
               source={iconName}
             />
