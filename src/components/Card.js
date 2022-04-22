@@ -76,7 +76,12 @@ const Card = () => {
             {item.name}
           </CustomText>
         </View>
-        <TouchableOpacity style={styles.heartIcon}>
+        <TouchableOpacity
+          style={styles.heartIcon}
+          onPress={() => {
+            console.log("heart");
+          }}
+        >
           <Image
             source={
               item.favourite ? Images.favouriteActive : Images.favouriteInActive

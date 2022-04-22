@@ -3,7 +3,7 @@ import React from "react";
 
 const PlantDetails = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>PlantDetails</Text>
     </View>
   );
@@ -11,4 +11,10 @@ const PlantDetails = () => {
 
 export default PlantDetails;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});

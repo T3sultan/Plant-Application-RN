@@ -7,6 +7,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "./src/screens/app";
 import AppNavigation from "./src/navigation/AppNavigation";
+import PlantDetails from "./src/screens/app/PlantDetails";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,11 @@ export default function App() {
           options={{ headerShown: false }}
           name="AppNavigation"
           component={AppNavigation}
+        />
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="PlantDetails"
+          component={PlantDetails}
         />
       </Stack.Navigator>
     </NavigationContainer>

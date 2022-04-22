@@ -3,8 +3,10 @@ import React from "react";
 import { Colors, Images, Metrics } from "../../theme";
 import CustomText from "../../common/CustomText";
 import Card from "../../components/Card";
+import Share from "../../components/Share";
+import Footer from "../../components/Footer";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* new plant */}
@@ -32,9 +34,23 @@ const Home = () => {
         </View>
       </View>
       {/* my plant share */}
-      <View style={styles.wrapperContainer}></View>
+      <View style={styles.wrapperContainer}>
+        <View style={styles.myPlantContainer}>
+          <View>
+            <View style={styles.titleStylingContainer}>
+              <CustomText dodgerblue>Today's Share</CustomText>
+              <TouchableOpacity onPress={() => {}}>
+                <CustomText gainsboro>See All</CustomText>
+              </TouchableOpacity>
+            </View>
+          </View>
+          <Share navigation={navigation} />
+        </View>
+      </View>
       {/* add my new friend */}
-      <View style={styles.wrapperContainer1}></View>
+      <View style={styles.wrapperContainer1}>
+        <Footer />
+      </View>
     </View>
   );
 };
@@ -44,6 +60,7 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: Colors.gainsboro,
   },
   wrapper: {
     backgroundColor: Colors.white,
@@ -52,9 +69,11 @@ const styles = StyleSheet.create({
   wrapperContainer: {
     backgroundColor: Colors.white,
     height: "50%",
+    borderBottomEndRadius: Metrics.doubleBase,
+    borderBottomLeftRadius: Metrics.doubleBase,
   },
   wrapperContainer1: {
-    backgroundColor: Colors.bisque,
+    // backgroundColor: Colors.white,
     height: "30%",
   },
   wrapperStyle: {
@@ -81,4 +100,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   newPlantsContainer: {},
+  myPlantContainer: {
+    flex: 1,
+    borderBottomLeftRadius: Metrics.regular,
+    borderBottomRightRadius: Metrics.regular,
+    backgroundColor: Colors.white,
+    padding: Metrics.base,
+  },
+  titleStylingContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
 });
