@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
   wrapper: {
     backgroundColor: Colors.white,
     height: "30%",
-    // marginTop: Metrics.halfBase,
   },
   wrapperContainer: {
     backgroundColor: Colors.white,
@@ -71,7 +70,6 @@ const styles = StyleSheet.create({
   imageStyle: {
     width: Metrics.base,
     height: Metrics.base,
-    // marginTop: Metrics.halfBase,
   },
   textContainer: {
     color: Colors.white,
@@ -82,7 +80,5 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  newPlantsContainer: {
-    // marginTop: Metrics.base,
-  },
+  newPlantsContainer: {},
 });

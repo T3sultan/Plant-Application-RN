@@ -33,6 +33,7 @@ const CustomText = props => {
     style,
     lh,
     numberOfLines,
+    white,
   } = props;
   return (
     <RNText
@@ -58,6 +59,7 @@ const CustomText = props => {
         primaryColor && { color: Colors.primaryColor },
         antiquewhite && { color: Colors.antiquewhite },
         aqua && { color: Colors.aqua },
+        white && { color: Colors.white },
 
         //position
         underLine && { textDecorationLine: "underline" },

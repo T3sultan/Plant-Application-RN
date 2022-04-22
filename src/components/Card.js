@@ -1,7 +1,15 @@
-import { StyleSheet, Text, View, FlatList, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import React, { useState } from "react";
-import { Images, Metrics } from "../theme";
+import { Images, Metrics, Colors } from "../theme";
 import { SIZES } from "../theme/fonts";
+import CustomText from "./../common/CustomText";
 
 const Card = () => {
   const [newPlats, setNewPlants] = useState([
@@ -27,6 +35,30 @@ const Card = () => {
       id: 3,
       name: "Plant 4",
       img: Images.plant4,
+      favourite: true,
+    },
+    {
+      id: 4,
+      name: "Plant 5",
+      img: Images.plant1,
+      favourite: false,
+    },
+    {
+      id: 5,
+      name: "Plant 6",
+      img: Images.plant2,
+      favourite: true,
+    },
+    {
+      id: 6,
+      name: "Plant 7",
+      img: Images.plant3,
+      favourite: true,
+    },
+    {
+      id: 7,
+      name: "Plant 8",
+      img: Images.plant4,
       favourite: false,
     },
   ]);
@@ -39,6 +71,20 @@ const Card = () => {
           resizeMode="cover"
           style={styles.imageContainer}
         />
+        <View style={styles.textContainer}>
+          <CustomText white nunitoBold>
+            {item.name}
+          </CustomText>
+        </View>
+        <TouchableOpacity style={styles.heartIcon}>
+          <Image
+            source={
+              item.favourite ? Images.favouriteActive : Images.favouriteInActive
+            }
+            resizeMode="contain"
+            style={styles.iconContainer}
+          />
+        </TouchableOpacity>
       </View>
     );
   };
@@ -59,23 +105,32 @@ const Card = () => {
 export default Card;
 
 const styles = StyleSheet.create({
-  container: {
-    // marginTop: Metrics.base,
-  },
+  container: {},
   wrapper: {
     justifyContent: "center",
     alignItems: "center",
-    // marginHorizontal: Metrics.base,
   },
   imageContainer: {
-    // borderRadius: Metrics.halfBase,
-    // padding: Metrics.base,
-    // width: Metrics.screenWidth * 0.4,
-    // margin: Metrics.start,
-    // height: Metrics.re,
     height: "85%",
     width: SIZES.width * 0.23,
     borderRadius: 15,
     margin: Metrics.starter,
+  },
+  textContainer: {
+    position: "absolute",
+    bottom: "13%",
+    right: 0,
+    backgroundColor: Colors.primaryColor,
+    paddingHorizontal: Metrics.starter,
+    borderTopLeftRadius: Metrics.halfBase,
+  },
+  iconContainer: {
+    width: Metrics.base,
+    height: Metrics.base,
+  },
+  heartIcon: {
+    position: "absolute",
+    top: "16%",
+    left: Metrics.halfBase,
   },
 });
