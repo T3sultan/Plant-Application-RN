@@ -1,19 +1,30 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 import React from "react";
 import { Colors, Images, Metrics } from "../../theme";
 import CustomText from "../../common/CustomText";
 import RequirementsBar from "../../components/RequirementsBar";
+import RequirementDetails from "../../components/RequirementDetails";
+import Header from "../../components/Header";
 
-const PlantDetails = () => {
+const PlantDetails = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* banner image */}
       <View style={{ height: "35%" }}>
-        <Image
+        <ImageBackground
           resizeMode="cover"
           style={styles.bannerImageStyle}
           source={Images.bannerBg}
-        />
+        >
+          <View>
+            <Header navigation={navigation} />
+          </View>
+          <View style={styles.headerTitle}>
+            <CustomText mega white>
+              Natural{" "}
+            </CustomText>
+          </View>
+        </ImageBackground>
       </View>
       {/* requirement */}
       <View style={styles.wrapper}>
@@ -24,6 +35,9 @@ const PlantDetails = () => {
           <Image />
         </View>
         <RequirementsBar />
+        <View>
+          <RequirementDetails />
+        </View>
       </View>
     </View>
   );
@@ -49,5 +63,11 @@ const styles = StyleSheet.create({
   },
   requirement: {
     // padding: Metrics.base,
+  },
+  headerTitle: {
+    marginLeft: Metrics.doubleBase,
+    marginTop: Metrics.base,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
