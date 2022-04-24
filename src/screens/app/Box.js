@@ -3,7 +3,7 @@ import React from "react";
 
 const Box = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Box</Text>
     </View>
   );
@@ -11,4 +11,10 @@ const Box = () => {
 
 export default Box;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});

@@ -31,6 +31,19 @@ const Share = ({ navigation }) => {
             style={styles.shareImage}
           />
         </TouchableOpacity>
+        <TouchableOpacity
+          style={{ flex: 1, marginTop: Metrics.starter }}
+          onPress={() => {
+            console.log("clicked");
+            navigation.navigate("PlantDetails");
+          }}
+        >
+          <Image
+            source={Images.plant4}
+            resizeMode="cover"
+            style={styles.shareImage}
+          />
+        </TouchableOpacity>
       </View>
       <View style={styles.wrapper1}>
         <TouchableOpacity
@@ -42,6 +55,19 @@ const Share = ({ navigation }) => {
         >
           <Image
             source={Images.plant3}
+            resizeMode="cover"
+            style={styles.shareImage}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={{ flex: 1, marginTop: Metrics.starter }}
+          onPress={() => {
+            console.log("clicked");
+            navigation.navigate("PlantDetails");
+          }}
+        >
+          <Image
+            source={Images.plant5}
             resizeMode="cover"
             style={styles.shareImage}
           />
