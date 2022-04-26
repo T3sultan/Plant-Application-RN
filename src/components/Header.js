@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import { Metrics, Images } from "../theme";
+import { Metrics, Images, Colors } from "../theme";
 
 const Header = ({ navigation }) => {
   return (
