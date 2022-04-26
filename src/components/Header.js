@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Metrics, Images, Colors } from "../theme";
-
+// Tipu Sultan
 const Header = ({ navigation }) => {
   return (
     <View style={styles.container}>
